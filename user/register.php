@@ -1,44 +1,47 @@
 <?php
-// Kết nối cơ sở dữ liệu
-require_once '../includes/db.php';  // Đảm bảo đường dẫn đúng đến db.php
+// Include database connection và functions
+require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/function.php';
+
+// Log page access
+logInfo("REGISTER PAGE: Accessed register page");
 
 // Khởi tạo thông báo lỗi
 $error_message = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Nhận giá trị từ form
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    
-    // Kiểm tra xem các trường có rỗng không
-    if (empty($username) || empty($email) || empty($password)) {
-        $error_message = "Tên đăng nhập, email và mật khẩu không được để trống.";
-    } else {
-        // Kiểm tra xem tên đăng nhập đã tồn tại trong cơ sở dữ liệu chưa
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
-        $stmt->execute([$username, $email]);
-        
-        if ($stmt->rowCount() > 0) {
-            $error_message = "Tên đăng nhập hoặc email đã tồn tại. Vui lòng chọn tên khác.";
-        } else {
-            // Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            
-            // Giá trị mặc định cho role và status
-            $role = 2;  // Giá trị mặc định cho role
-            $status = 'normal';  // Giá trị mặc định cho status
+// Log request method
+logDebug("REGISTER PAGE: Request method - " . $_SERVER['REQUEST_METHOD']);
 
-            // Thêm người dùng mới vào cơ sở dữ liệu
-            $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role, status) VALUES (?, ?, ?, ?, ?)");
-            if ($stmt->execute([$username, $email, $hashed_password, $role, $status])) {
-                // Đăng ký thành công, chuyển hướng tới trang đăng nhập
-                header("Location: login.php");
-                exit();
-            } else {
-                $error_message = "Đã xảy ra lỗi. Vui lòng thử lại.";
-            }
-        }
+// Check database connection
+if (!isset($pdo) || !($pdo instanceof PDO)) {
+    logError("REGISTER PAGE: Database connection failed - PDO is not available");
+    $error_message = 'Lỗi kết nối database. Vui lòng thử lại sau.';
+} else {
+    logDebug("REGISTER PAGE: Database connection OK");
+}
+
+if (isPost()) {
+    logInfo("REGISTER PAGE: Processing POST request");
+    
+    // Nhận và sanitize giá trị từ form
+    $username = sanitizeInput(getPost('username'));
+    $email = sanitizeInput(getPost('email'));
+    $password = getPost('password');
+    
+    logDebug("REGISTER PAGE: Form data - username: " . $username . ", email: " . $email . ", password length: " . strlen($password));
+    
+    // Sử dụng function registerUser từ auth_function.php
+    $registerResult = registerUser($username, $email, $password, $pdo);
+    
+    logData($registerResult, "REGISTER RESULT");
+    
+    if ($registerResult['success']) {
+        logInfo("REGISTER PAGE: Registration successful, redirecting to login");
+        // Đăng ký thành công, chuyển hướng tới trang đăng nhập
+        redirect('login.php');
+    } else {
+        logWarning("REGISTER PAGE: Registration failed - " . $registerResult['error']);
+        $error_message = $registerResult['error'];
     }
 }
 ?>

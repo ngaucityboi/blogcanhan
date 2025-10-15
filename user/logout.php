@@ -1,19 +1,14 @@
 <?php
-// /user/logout.php
-if (session_status() === PHP_SESSION_NONE) session_start();
+// Include functions
+require_once __DIR__ . '/../includes/function.php';
 
-/* Xoá toàn bộ session */
-$_SESSION = [];
+// Log logout attempt
+logInfo("LOGOUT: User logout attempt - session data: " . print_r($_SESSION ?? [], true));
 
-/* Xoá cookie phiên nếu có */
-if (ini_get('session.use_cookies')) {
-  $p = session_get_cookie_params();
-  setcookie(session_name(), '', time() - 42000, $p['path'], $p['domain'], $p['secure'], $p['httponly']);
-}
+// Sử dụng function logoutUser từ auth_function.php
+logoutUser();
 
-/* Huỷ phiên */
-session_destroy();
+logInfo("LOGOUT: User logged out successfully");
 
-/* Điều hướng về trang đăng nhập kèm cờ thông báo */
-header('Location: /user/login.php?logged_out=1');
-exit;
+// Điều hướng về trang đăng nhập kèm thông báo
+redirect('login.php?logged_out=1');
