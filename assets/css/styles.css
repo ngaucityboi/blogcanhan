@@ -1,0 +1,180 @@
+/* ===== Tokens & Base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+  --maxw: 1200px;
+
+  /* Colors (spec) */
+  --primary: #4A90E2;
+  --primary-hover: #0068CE;
+  --header-line: #D9EAF7;
+  --bg: #F9FAFC;
+  --text: #2F2F2F;
+  --muted: #6B7280;
+
+  --card-border: #E7F0FB;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(2,6,23,.06);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:'Roboto', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--bg);
+}
+img{ max-width:100%; display:block; }
+a{ color:var(--primary); text-decoration:none; }
+a:hover{ color:var(--primary-hover); text-decoration:underline; }
+
+.container{ max-width:var(--maxw); margin:0 auto; padding:0 20px; }
+
+/* ===== Typography ===== */
+h1{ font-size:clamp(2rem, 1.85rem + 0.7vw, 2.25rem); line-height:1.2; margin:0 0 .75rem; }
+h2{ font-size:clamp(1.6rem, 1.35rem + 0.6vw, 1.875rem); line-height:1.25; margin:0 0 .75rem; }
+h3{ font-size:clamp(1.375rem, 1.2rem + 0.4vw, 1.5rem); line-height:1.3; margin:.25rem 0 .5rem; }
+p{  font-size:clamp(1rem, .95rem + .2vw, 1.125rem); margin:0 0 1rem; text-align:justify; }
+small,.meta{ font-size:clamp(.8rem, .77rem + .15vw, .875rem); color:var(--muted); }
+
+/* ===== Header ===== */
+.header{ position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--header-line); }
+.header .inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
+.logo{ color:var(--primary); font-weight:700; font-size:1.25rem; }
+
+/* ===== Layout: Sidebar + Content ===== */
+.layout{ display:grid; grid-template-columns:280px 1fr; gap:24px; margin:24px 0; }
+@media (max-width: 992px){ .layout{ grid-template-columns:1fr; } }
+
+/* ===== Card ===== */
+.card{
+  background:#fff;
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:16px;
+}
+
+/* ===== Forms ===== */
+form .form-group{ margin-bottom:14px; }
+label{ display:block; margin:10px 0 6px; font-weight:500; }
+input, textarea, select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--card-border);
+  border-radius:10px;
+  background:#fff;
+  outline:none;
+}
+input:focus, textarea:focus, select:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(74,144,226,.15);
+}
+.error-message{
+  background:#ffe9e9; color:#b00020;
+  border:1px solid #ffd0d0; border-radius:10px;
+  padding:12px; margin-bottom:12px;
+}
+
+/* ===== Buttons (đã áp dụng cho button mặc định + class .btn) ===== */
+button,
+input[type="submit"],
+input[type="button"],
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:10px 14px;
+  border:1px solid transparent;
+  border-radius:10px;
+  background:var(--primary);
+  color:#fff;
+  font-weight:600;
+  font-size:clamp(.9375rem, .9rem + .1vw, 1rem); /* theo spec */
+  cursor:pointer;
+  box-shadow:var(--shadow);
+  transition:background .2s ease, transform .05s ease, box-shadow .2s ease;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.btn:hover{
+  background:var(--primary-hover);
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.btn:active{
+  transform:translateY(0);
+}
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="button"]:focus-visible,
+.btn:focus-visible{
+  outline:0;
+  box-shadow:0 0 0 3px rgba(74,144,226,.28);
+}
+button:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+.btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+/* Variants */
+.btn-outline{
+  background:#fff;
+  color:var(--primary);
+  border-color:var(--primary);
+  box-shadow:none;
+}
+.btn-outline:hover{ background:var(--primary); color:#fff; }
+
+.btn-ghost{
+  background:transparent;
+  color:var(--primary);
+  border-color:transparent;
+  box-shadow:none;
+}
+.btn-ghost:hover{ background:#eef5ff; }
+
+/* Sizes */
+.btn-sm{ padding:8px 10px; border-radius:8px; font-size:.9rem; }
+.btn-lg{ padding:12px 18px; border-radius:12px; font-size:1.05rem; }
+.btn-icon{ width:40px; height:40px; padding:0; border-radius:50%; display:inline-grid; place-items:center; }
+
+/* ===== Lists / Grids for posts ===== */
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width: 992px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width: 640px){ .grid{ grid-template-columns:1fr; } }
+
+.post-card{
+  display:grid; grid-template-columns:120px 1fr; gap:14px;
+  background:#fff; border:1px solid var(--card-border);
+  border-radius:var(--radius); box-shadow:var(--shadow); padding:14px;
+}
+.post-card .thumb{ border-radius:10px; overflow:hidden; aspect-ratio:16/10; background:#F1F5F9; }
+.post-card h3{ margin:0 0 6px; }
+.post-card .meta{ display:flex; gap:12px; align-items:center; color:var(--muted); }
+
+/* ===== Table (admin) ===== */
+.table{ width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--card-border); border-radius:var(--radius); overflow:hidden; }
+.table th,.table td{ padding:10px 12px; border-bottom:1px solid #EEF5FF; text-align:left; }
+.table th{ background:#F3F8FF; font-weight:600; }
+.table tr:hover{ background:#FAFCFF; }
+
+/* ===== Footer ===== */
+.footer{ margin-top:40px; background:#fff; border-top:1px solid var(--header-line); color:var(--muted); padding:16px 0; }
+
+/* ===== Utilities ===== */
+.center{ text-align:center; } .right{ text-align:right; } .muted{ color:var(--muted); }
+.mt-1{ margin-top:.5rem; } .mt-2{ margin-top:1rem; } .mt-3{ margin-top:1.5rem; }
+.mb-1{ margin-bottom:.5rem; } .mb-2{ margin-bottom:1rem; } .mb-3{ margin-bottom:1.5rem; }
+.p-1{ padding:.5rem; } .p-2{ padding:1rem; } .p-3{ padding:1.5rem; }
+
+/* ===== Demo helpers (có thể xoá nếu không dùng) ===== */
+.thumb, .avatar{ background:linear-gradient(180deg,#eef5ff,#e9f2ff); }
