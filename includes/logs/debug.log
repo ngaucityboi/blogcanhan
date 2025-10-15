@@ -343,3 +343,65 @@
 )
 
 [2025-10-15 14:53:09] [INFO] LOGIN PAGE: Login successful, redirecting to index
+[2025-10-15 16:23:45] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 16:23:45] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 16:23:45] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+    [user_id] => 7
+    [username] => Nguyen0908
+    [role] => 2
+)
+
+[2025-10-15 16:23:45] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 16:23:45] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 16:23:45] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen2005bv@gmail.com, password length: 4
+[2025-10-15 16:23:45] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 16:23:45] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 16:23:45] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 16:23:45] [DEBUG] LOGIN: Query executed, user found: NO
+[2025-10-15 16:23:45] [WARNING] LOGIN FAILED: User not found for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 16:23:45] [DEBUG] LOGIN: Final result - success: false, error: Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 16:23:45] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Tài khoản hoặc mật khẩu không đúng.
+    [user] => 
+)
+
+[2025-10-15 16:23:45] [WARNING] LOGIN PAGE: Login failed - Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 16:23:47] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 16:23:47] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 16:23:47] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+    [user_id] => 7
+    [username] => Nguyen0908
+    [role] => 2
+)
+
+[2025-10-15 16:23:47] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 16:23:47] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 16:23:47] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen05bv@gmail.com, password length: 25
+[2025-10-15 16:23:47] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen05bv@gmail.com
+[2025-10-15 16:23:47] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 16:23:47] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 16:23:47] [DEBUG] LOGIN: Query executed, user found: YES
+[2025-10-15 16:23:47] [INFO] LOGIN SUCCESS: User logged in successfully: Nguyen0908
+[2025-10-15 16:23:47] [DEBUG] LOGIN: Session data set - user_id: 7, username: Nguyen0908, role: 2
+[2025-10-15 16:23:47] [DEBUG] LOGIN: Final result - success: true, error: 
+[2025-10-15 16:23:47] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 1
+    [error] => 
+    [user] => Array
+        (
+            [id] => 7
+            [username] => Nguyen0908
+            [email] => dovannguyen05bv@gmail.com
+            [password] => $2y$10$EHUw2HBuPksnDqVpDDYjo.eH7RHpGRQVT.v9hD7HcTEQ9o3tAy9vm
+            [role] => 2
+            [status] => normal
+        )
+
+)
+
+[2025-10-15 16:23:47] [INFO] LOGIN PAGE: Login successful, redirecting to index
