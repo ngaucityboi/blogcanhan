@@ -1,50 +1,52 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
 
-/* NẠP KẾT NỐI DB: sửa đường dẫn theo cấu trúc của bạn
-   /blogcanhan/
-     ├─ includes/db.php
-     └─ users/login.php  (hoặc user/login.php)
-*/
+// Include database connection và functions
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/function.php';
+
+// Log page access
+logInfo("LOGIN PAGE: Accessed login page");
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Nếu vẫn lỗi, bỏ comment dòng dưới để kiểm tra nhanh
-// if (!isset($pdo) || !($pdo instanceof PDO)) { die('Không có kết nối DB ($pdo)'); }
-
 $error = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $identity = trim($_POST['identity'] ?? '');  // cho phép nhập username hoặc email
-    $password = (string)($_POST['password'] ?? '');
+// Log request method
+logDebug("LOGIN PAGE: Request method - " . $_SERVER['REQUEST_METHOD']);
 
-    if ($identity === '' || $password === '') {
-        $error = 'Vui lòng nhập đủ tài khoản (username/email) và mật khẩu.';
+// Log session data
+logDebug("LOGIN PAGE: Current session data - " . print_r($_SESSION, true));
+
+// Check database connection
+if (!isset($pdo) || !($pdo instanceof PDO)) {
+    logError("LOGIN PAGE: Database connection failed - PDO is not available");
+    $error = 'Lỗi kết nối database. Vui lòng thử lại sau.';
+} else {
+    logDebug("LOGIN PAGE: Database connection OK");
+}
+
+if (isPost()) {
+    logInfo("LOGIN PAGE: Processing POST request");
+    
+    $identity = sanitizeInput(getPost('identity'));
+    $password = getPost('password');
+    
+    logDebug("LOGIN PAGE: Form data - identity: " . $identity . ", password length: " . strlen($password));
+    
+    // Sử dụng function loginUser từ auth_function.php
+    $loginResult = loginUser($identity, $password, $pdo);
+    
+    logData($loginResult, "LOGIN RESULT");
+    
+    if ($loginResult['success']) {
+        logInfo("LOGIN PAGE: Login successful, redirecting to index");
+        // Đăng nhập thành công, điều hướng về trang chủ
+        redirect('../index.php');
     } else {
-        $sql = "SELECT id, username, email, password, role, status
-                FROM users
-                WHERE username = :id OR email = :id
-                LIMIT 1";
-        $st = $pdo->prepare($sql);
-        $st->execute([':id' => $identity]);
-        $user = $st->fetch(PDO::FETCH_ASSOC);
-
-        if (!$user || !password_verify($password, $user['password'])) {
-            $error = 'Tài khoản hoặc mật khẩu không đúng.';
-        } elseif ($user['status'] !== 'normal') {
-            $error = 'Tài khoản của bạn đang bị khóa.';
-        } else {
-            // Đăng nhập thành công
-            $_SESSION['user_id']  = (int)$user['id'];
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['role']     = (int)$user['role'];
-
-            // Điều hướng về trang chủ (sửa đường dẫn nếu khác)
-            header('Location: ../index.php');
-            exit;
-        }
+        logWarning("LOGIN PAGE: Login failed - " . $loginResult['error']);
+        $error = $loginResult['error'];
     }
 }
 ?>

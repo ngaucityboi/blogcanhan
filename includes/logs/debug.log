@@ -1,0 +1,345 @@
+[2025-10-15 14:32:15] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:32:15] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:32:15] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:32:15] [ERROR] LOGIN ERROR: PDO Exception - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist
+[2025-10-15 14:32:15] [ERROR] Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in C:\laragon\www\blogcanhan\includes\functions\auth_function.php line 40
+[2025-10-15 14:32:15] [DEBUG] LOGIN: Final result - success: false, error: Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:32:19] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:32:19] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:32:19] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:32:19] [ERROR] LOGIN ERROR: PDO Exception - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist
+[2025-10-15 14:32:19] [ERROR] Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in C:\laragon\www\blogcanhan\includes\functions\auth_function.php line 40
+[2025-10-15 14:32:19] [DEBUG] LOGIN: Final result - success: false, error: Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:33:10] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:33:10] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:33:10] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:33:10] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:33:10] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:33:10] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen2005bv@gmail.com, password length: 2
+[2025-10-15 14:33:10] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:33:10] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:33:10] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:33:10] [ERROR] LOGIN ERROR: PDO Exception - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist
+[2025-10-15 14:33:10] [ERROR] Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in C:\laragon\www\blogcanhan\includes\functions\auth_function.php line 40
+[2025-10-15 14:33:10] [DEBUG] LOGIN: Final result - success: false, error: Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:33:10] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Lỗi hệ thống. Vui lòng thử lại.
+    [user] => 
+)
+
+[2025-10-15 14:33:10] [WARNING] LOGIN PAGE: Login failed - Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:33:14] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:33:14] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:33:14] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:33:14] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:33:14] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:33:14] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen2005bv@gmail.com, password length: 4
+[2025-10-15 14:33:14] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:33:14] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:33:14] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:33:14] [ERROR] LOGIN ERROR: PDO Exception - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist
+[2025-10-15 14:33:14] [ERROR] Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in C:\laragon\www\blogcanhan\includes\functions\auth_function.php line 40
+[2025-10-15 14:33:14] [DEBUG] LOGIN: Final result - success: false, error: Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:33:14] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Lỗi hệ thống. Vui lòng thử lại.
+    [user] => 
+)
+
+[2025-10-15 14:33:14] [WARNING] LOGIN PAGE: Login failed - Lỗi hệ thống. Vui lòng thử lại.
+[2025-10-15 14:34:14] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:34:14] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:34:14] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:34:14] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:34:14] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:34:14] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen2005bv@gmail.com, password length: 6
+[2025-10-15 14:34:14] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:34:14] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:34:14] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:34:14] [DEBUG] LOGIN: Query executed, user found: NO
+[2025-10-15 14:34:14] [WARNING] LOGIN FAILED: User not found for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:34:14] [DEBUG] LOGIN: Final result - success: false, error: Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:34:14] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Tài khoản hoặc mật khẩu không đúng.
+    [user] => 
+)
+
+[2025-10-15 14:34:14] [WARNING] LOGIN PAGE: Login failed - Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:35:11] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:35:11] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:35:11] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:35:11] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:35:11] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:35:11] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen2005bv@gmail.com, password length: 6
+[2025-10-15 14:35:11] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:35:11] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:35:11] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:35:11] [DEBUG] LOGIN: Query executed, user found: NO
+[2025-10-15 14:35:11] [WARNING] LOGIN FAILED: User not found for identity: dovannguyen2005bv@gmail.com
+[2025-10-15 14:35:11] [DEBUG] LOGIN: Final result - success: false, error: Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:35:11] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Tài khoản hoặc mật khẩu không đúng.
+    [user] => 
+)
+
+[2025-10-15 14:35:11] [WARNING] LOGIN PAGE: Login failed - Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:35:12] [INFO] REGISTER PAGE: Accessed register page
+[2025-10-15 14:35:12] [DEBUG] REGISTER PAGE: Request method - GET
+[2025-10-15 14:35:12] [DEBUG] REGISTER PAGE: Database connection OK
+[2025-10-15 14:35:23] [INFO] REGISTER PAGE: Accessed register page
+[2025-10-15 14:35:23] [DEBUG] REGISTER PAGE: Request method - POST
+[2025-10-15 14:35:23] [DEBUG] REGISTER PAGE: Database connection OK
+[2025-10-15 14:35:23] [INFO] REGISTER PAGE: Processing POST request
+[2025-10-15 14:35:23] [DEBUG] REGISTER PAGE: Form data - username: dovannguyenbv@gmail.com, email: dovannguyenbv@gmail.com, password length: 10
+[2025-10-15 14:35:23] [INFO] REGISTER ATTEMPT: Starting registration for username: dovannguyenbv@gmail.com, email: dovannguyenbv@gmail.com
+[2025-10-15 14:35:23] [DEBUG] REGISTER: Checking PDO connection
+[2025-10-15 14:35:23] [DEBUG] REGISTER: Checking for existing username/email
+[2025-10-15 14:35:23] [DEBUG] REGISTER: Hashing password
+[2025-10-15 14:35:23] [DEBUG] REGISTER: Inserting new user into database
+[2025-10-15 14:35:23] [INFO] REGISTER SUCCESS: User registered successfully - username: dovannguyenbv@gmail.com, email: dovannguyenbv@gmail.com
+[2025-10-15 14:35:23] [DEBUG] REGISTER: Final result - success: true, error: 
+[2025-10-15 14:35:23] [DEBUG] REGISTER RESULT: Array
+(
+    [success] => 1
+    [error] => 
+)
+
+[2025-10-15 14:35:23] [INFO] REGISTER PAGE: Registration successful, redirecting to login
+[2025-10-15 14:35:23] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:35:23] [DEBUG] LOGIN PAGE: Request method - GET
+[2025-10-15 14:35:23] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:35:23] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:35:26] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:35:26] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:35:26] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:35:26] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:35:26] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:35:26] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyenbv@gmail.com, password length: 10
+[2025-10-15 14:35:26] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyenbv@gmail.com
+[2025-10-15 14:35:26] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:35:26] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:35:26] [DEBUG] LOGIN: Query executed, user found: YES
+[2025-10-15 14:35:26] [INFO] LOGIN SUCCESS: User logged in successfully: dovannguyenbv@gmail.com
+[2025-10-15 14:35:26] [DEBUG] LOGIN: Session data set - user_id: 6, username: dovannguyenbv@gmail.com, role: 2
+[2025-10-15 14:35:26] [DEBUG] LOGIN: Final result - success: true, error: 
+[2025-10-15 14:35:26] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 1
+    [error] => 
+    [user] => Array
+        (
+            [id] => 6
+            [username] => dovannguyenbv@gmail.com
+            [email] => dovannguyenbv@gmail.com
+            [password] => $2y$10$hpmuNzmOSEFOkAsLnTxRb.KmY8f/gZ/VJOoCroYZS/hZwmqOyvJGK
+            [role] => 2
+            [status] => normal
+        )
+
+)
+
+[2025-10-15 14:35:26] [INFO] LOGIN PAGE: Login successful, redirecting to index
+[2025-10-15 14:48:09] [INFO] HOMEPAGE: User accessed homepage
+[2025-10-15 14:48:09] [WARNING] HOMEPAGE: User not logged in, redirecting to login
+[2025-10-15 14:48:10] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:48:10] [DEBUG] LOGIN PAGE: Request method - GET
+[2025-10-15 14:48:10] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:48:10] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:48:15] [INFO] HOMEPAGE: User accessed homepage
+[2025-10-15 14:48:15] [INFO] HOMEPAGE: User logged in - dovannguyenbv@gmail.com
+[2025-10-15 14:48:15] [INFO] HOMEPAGE: Getting latest posts, limit: 15
+[2025-10-15 14:48:15] [ERROR] HOMEPAGE: PDO Exception - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list'
+[2025-10-15 14:48:15] [ERROR] Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list' in C:\laragon\www\blogcanhan\includes\functions\homepage_function.php line 32
+[2025-10-15 14:48:15] [INFO] HOMEPAGE: Getting stats for user: 6
+[2025-10-15 14:48:15] [ERROR] HOMEPAGE: Error getting stats - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+[2025-10-15 14:48:15] [DEBUG] HOMEPAGE: Loaded 0 posts for display
+[2025-10-15 14:48:51] [INFO] HOMEPAGE: User accessed homepage
+[2025-10-15 14:48:51] [INFO] HOMEPAGE: User logged in - dovannguyenbv@gmail.com
+[2025-10-15 14:48:51] [INFO] HOMEPAGE: Flash message displayed - Đăng bài thành công!
+[2025-10-15 14:48:51] [INFO] HOMEPAGE: Getting latest posts, limit: 15
+[2025-10-15 14:48:51] [ERROR] HOMEPAGE: PDO Exception - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list'
+[2025-10-15 14:48:51] [ERROR] Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list' in C:\laragon\www\blogcanhan\includes\functions\homepage_function.php line 32
+[2025-10-15 14:48:51] [INFO] HOMEPAGE: Getting stats for user: 6
+[2025-10-15 14:48:51] [ERROR] HOMEPAGE: Error getting stats - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+[2025-10-15 14:48:51] [DEBUG] HOMEPAGE: Loaded 0 posts for display
+[2025-10-15 14:48:55] [INFO] HOMEPAGE: User accessed homepage
+[2025-10-15 14:48:55] [INFO] HOMEPAGE: User logged in - dovannguyenbv@gmail.com
+[2025-10-15 14:48:55] [INFO] HOMEPAGE: Getting latest posts, limit: 15
+[2025-10-15 14:48:55] [ERROR] HOMEPAGE: PDO Exception - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list'
+[2025-10-15 14:48:55] [ERROR] Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list' in C:\laragon\www\blogcanhan\includes\functions\homepage_function.php line 32
+[2025-10-15 14:48:55] [INFO] HOMEPAGE: Getting stats for user: 6
+[2025-10-15 14:48:55] [ERROR] HOMEPAGE: Error getting stats - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+[2025-10-15 14:48:55] [DEBUG] HOMEPAGE: Loaded 0 posts for display
+[2025-10-15 14:49:01] [INFO] HOMEPAGE: User accessed homepage
+[2025-10-15 14:49:01] [INFO] HOMEPAGE: User logged in - dovannguyenbv@gmail.com
+[2025-10-15 14:49:01] [INFO] HOMEPAGE: Getting latest posts, limit: 15
+[2025-10-15 14:49:01] [ERROR] HOMEPAGE: PDO Exception - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list'
+[2025-10-15 14:49:01] [ERROR] Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.excerpt' in 'field list' in C:\laragon\www\blogcanhan\includes\functions\homepage_function.php line 32
+[2025-10-15 14:49:01] [INFO] HOMEPAGE: Getting stats for user: 6
+[2025-10-15 14:49:01] [ERROR] HOMEPAGE: Error getting stats - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+[2025-10-15 14:49:01] [DEBUG] HOMEPAGE: Loaded 0 posts for display
+[2025-10-15 14:52:29] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:52:29] [DEBUG] LOGIN PAGE: Request method - GET
+[2025-10-15 14:52:29] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:52:29] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:52:41] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:52:41] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:52:41] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:52:41] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:52:41] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:52:41] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyenbv@gmail.com, password length: 11
+[2025-10-15 14:52:41] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyenbv@gmail.com
+[2025-10-15 14:52:41] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:52:41] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:52:41] [DEBUG] LOGIN: Query executed, user found: YES
+[2025-10-15 14:52:42] [WARNING] LOGIN FAILED: Password verification failed for user: dovannguyenbv@gmail.com
+[2025-10-15 14:52:42] [DEBUG] LOGIN: Final result - success: false, error: Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:52:42] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 
+    [error] => Tài khoản hoặc mật khẩu không đúng.
+    [user] => 
+)
+
+[2025-10-15 14:52:42] [WARNING] LOGIN PAGE: Login failed - Tài khoản hoặc mật khẩu không đúng.
+[2025-10-15 14:52:43] [INFO] REGISTER PAGE: Accessed register page
+[2025-10-15 14:52:43] [DEBUG] REGISTER PAGE: Request method - GET
+[2025-10-15 14:52:43] [DEBUG] REGISTER PAGE: Database connection OK
+[2025-10-15 14:52:51] [INFO] REGISTER PAGE: Accessed register page
+[2025-10-15 14:52:51] [DEBUG] REGISTER PAGE: Request method - POST
+[2025-10-15 14:52:51] [DEBUG] REGISTER PAGE: Database connection OK
+[2025-10-15 14:52:51] [INFO] REGISTER PAGE: Processing POST request
+[2025-10-15 14:52:51] [DEBUG] REGISTER PAGE: Form data - username: Nguyen0908, email: dovannguyen05bv@gmail.com, password length: 25
+[2025-10-15 14:52:51] [INFO] REGISTER ATTEMPT: Starting registration for username: Nguyen0908, email: dovannguyen05bv@gmail.com
+[2025-10-15 14:52:51] [DEBUG] REGISTER: Checking PDO connection
+[2025-10-15 14:52:51] [DEBUG] REGISTER: Checking for existing username/email
+[2025-10-15 14:52:51] [DEBUG] REGISTER: Hashing password
+[2025-10-15 14:52:51] [DEBUG] REGISTER: Inserting new user into database
+[2025-10-15 14:52:51] [INFO] REGISTER SUCCESS: User registered successfully - username: Nguyen0908, email: dovannguyen05bv@gmail.com
+[2025-10-15 14:52:51] [DEBUG] REGISTER: Final result - success: true, error: 
+[2025-10-15 14:52:51] [DEBUG] REGISTER RESULT: Array
+(
+    [success] => 1
+    [error] => 
+)
+
+[2025-10-15 14:52:51] [INFO] REGISTER PAGE: Registration successful, redirecting to login
+[2025-10-15 14:52:51] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:52:51] [DEBUG] LOGIN PAGE: Request method - GET
+[2025-10-15 14:52:51] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:52:51] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:53:00] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:53:00] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:53:00] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:53:00] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:53:00] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:53:00] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen05bv@gmail.com, password length: 25
+[2025-10-15 14:53:00] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen05bv@gmail.com
+[2025-10-15 14:53:00] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:53:00] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:53:00] [DEBUG] LOGIN: Query executed, user found: YES
+[2025-10-15 14:53:00] [INFO] LOGIN SUCCESS: User logged in successfully: Nguyen0908
+[2025-10-15 14:53:00] [DEBUG] LOGIN: Session data set - user_id: 7, username: Nguyen0908, role: 2
+[2025-10-15 14:53:00] [DEBUG] LOGIN: Final result - success: true, error: 
+[2025-10-15 14:53:00] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 1
+    [error] => 
+    [user] => Array
+        (
+            [id] => 7
+            [username] => Nguyen0908
+            [email] => dovannguyen05bv@gmail.com
+            [password] => $2y$10$EHUw2HBuPksnDqVpDDYjo.eH7RHpGRQVT.v9hD7HcTEQ9o3tAy9vm
+            [role] => 2
+            [status] => normal
+        )
+
+)
+
+[2025-10-15 14:53:00] [INFO] LOGIN PAGE: Login successful, redirecting to index
+[2025-10-15 14:53:06] [INFO] LOGOUT: User logout attempt - session data: Array
+(
+)
+
+[2025-10-15 14:53:06] [INFO] LOGOUT: User logged out successfully
+[2025-10-15 14:53:06] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:53:06] [DEBUG] LOGIN PAGE: Request method - GET
+[2025-10-15 14:53:06] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:53:06] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:53:09] [INFO] LOGIN PAGE: Accessed login page
+[2025-10-15 14:53:09] [DEBUG] LOGIN PAGE: Request method - POST
+[2025-10-15 14:53:09] [DEBUG] LOGIN PAGE: Current session data - Array
+(
+)
+
+[2025-10-15 14:53:09] [DEBUG] LOGIN PAGE: Database connection OK
+[2025-10-15 14:53:09] [INFO] LOGIN PAGE: Processing POST request
+[2025-10-15 14:53:09] [DEBUG] LOGIN PAGE: Form data - identity: dovannguyen05bv@gmail.com, password length: 25
+[2025-10-15 14:53:09] [INFO] LOGIN ATTEMPT: Starting login for identity: dovannguyen05bv@gmail.com
+[2025-10-15 14:53:09] [DEBUG] LOGIN: Checking PDO connection
+[2025-10-15 14:53:09] [DEBUG] LOGIN: Executing SQL query for user lookup
+[2025-10-15 14:53:09] [DEBUG] LOGIN: Query executed, user found: YES
+[2025-10-15 14:53:09] [INFO] LOGIN SUCCESS: User logged in successfully: Nguyen0908
+[2025-10-15 14:53:09] [DEBUG] LOGIN: Session data set - user_id: 7, username: Nguyen0908, role: 2
+[2025-10-15 14:53:09] [DEBUG] LOGIN: Final result - success: true, error: 
+[2025-10-15 14:53:09] [DEBUG] LOGIN RESULT: Array
+(
+    [success] => 1
+    [error] => 
+    [user] => Array
+        (
+            [id] => 7
+            [username] => Nguyen0908
+            [email] => dovannguyen05bv@gmail.com
+            [password] => $2y$10$EHUw2HBuPksnDqVpDDYjo.eH7RHpGRQVT.v9hD7HcTEQ9o3tAy9vm
+            [role] => 2
+            [status] => normal
+        )
+
+)
+
+[2025-10-15 14:53:09] [INFO] LOGIN PAGE: Login successful, redirecting to index
