@@ -1,4 +1,8 @@
 <?php
+// Include các function cần thiết
+require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/includes/functions/auth_function.php';
+require_once __DIR__ . '/includes/functions/post_function.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
@@ -11,27 +15,11 @@ unset($_SESSION['flash']);
   </div>
 <?php endif; 
 
-// Chỉ cho phép vào nếu đã đăng nhập
-if (session_status() === PHP_SESSION_NONE) session_start();
-if (empty($_SESSION['user_id'])) {
-  header('Location: /user/login.php?return=' . urlencode('/index.php'));
-  exit;
-}
-require_once __DIR__ . '/includes/db.php';
+// Kiểm tra authentication và lấy thông tin user
+$me = checkAuthenticationAndGetUser('/user/login.php', '/index.php');
 
-$me = [
-  'id'       => (int)$_SESSION['user_id'],
-  'username' => $_SESSION['username'] ?? 'Bạn',
-  'role'     => (int)($_SESSION['role'] ?? 2),
-];
-
-$posts = [];
-try {
-  $st = $pdo->query("SELECT id, title, content, published_at FROM posts ORDER BY published_at DESC LIMIT 15");
-  $posts = $st->fetchAll(PDO::FETCH_ASSOC);
-} catch (Throwable $e) {
-  $posts = [];
-}
+// Lấy danh sách bài viết cho trang chủ
+$posts = getPostsForHomepage($pdo, 15);
 ?>
 <!doctype html>
 <html lang="vi">
@@ -42,34 +30,8 @@ try {
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* Top bar */
-    .topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--header-line);z-index:60}
-    .topbar .row{display:grid;grid-template-columns:240px 1fr 240px;align-items:center;gap:12px;padding:10px 0}
-    .searchbox{display:flex;align-items:center;gap:8px;background:#f3f6fb;border:1px solid var(--card-border);border-radius:999px;padding:8px 12px}
-    .searchbox input{border:0;background:transparent;padding:0;width:100%}
-    .iconbar{display:flex;gap:14px;justify-content:flex-end}
-    .iconbtn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#f3f6fb;border:1px solid var(--card-border)}
+  <link rel="stylesheet" href="/assets/css/homepage/home.css">
 
-    /* Layout: 2 cột (Sidebar trái + Feed) */
-    .layout-feed{display:grid;grid-template-columns: 300px minmax(0,640px);gap:20px;margin:18px auto}
-    @media (max-width:992px){ .layout-feed{grid-template-columns: 1fr} }
-
-    /* Sidebar trái: chức năng bài post */
-    .shortcut a{display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;color:var(--text)}
-    .shortcut a:hover{background:#f3f8ff}
-
-    /* Composer + bài viết */
-    .avatar{width:40px;height:40px;border-radius:50%;background:#dce9fb;flex:0 0 40px}
-    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#f3f6fb;border:1px solid var(--card-border);font-size:.9rem}
-    .feed{display:flex;flex-direction:column;gap:14px}
-    .post{background:#fff;border:1px solid var(--card-border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
-    .post .head{display:flex;gap:10px;align-items:center;padding:12px}
-    .post .name{font-weight:600}
-    .post .time{font-size:.85rem;color:var(--muted)}
-    .post .body{padding:0 12px 12px}
-    .post .actions{display:flex;gap:8px;padding:8px 12px;border-top:1px solid #eef5ff}
-  </style>
 </head>
 <body>
 

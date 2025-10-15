@@ -163,3 +163,26 @@ function countPosts($pdo) {
         return 0;
     }
 }
+
+/**
+ * Lấy danh sách bài viết cho trang chủ
+ * @param PDO $pdo
+ * @param int $limit - số lượng bài viết tối đa
+ * @return array
+ */
+function getPostsForHomepage($pdo, $limit = 15) {
+    try {
+        $sql = "SELECT id, title, content, published_at 
+                FROM posts 
+                ORDER BY published_at DESC 
+                LIMIT :limit";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->execute();
+        
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Throwable $e) {
+        return [];
+    }
+}

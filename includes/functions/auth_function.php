@@ -246,3 +246,33 @@ function requireAdmin($redirectTo = '/index.php') {
         exit;
     }
 }
+
+/**
+ * Kiểm tra và khởi tạo session, chuyển hướng nếu chưa đăng nhập
+ * @param string $redirectTo - URL chuyển hướng khi chưa đăng nhập
+ * @param string $returnUrl - URL để quay lại sau khi đăng nhập
+ * @return array - thông tin user hiện tại
+ */
+function checkAuthenticationAndGetUser($redirectTo = '/user/login.php', $returnUrl = null) {
+    // Khởi tạo session nếu chưa có
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    // Kiểm tra đăng nhập
+    if (empty($_SESSION['user_id'])) {
+        $redirect = $redirectTo;
+        if ($returnUrl) {
+            $redirect .= '?return=' . urlencode($returnUrl);
+        }
+        header('Location: ' . $redirect);
+        exit;
+    }
+    
+    // Trả về thông tin user
+    return [
+        'id'       => (int)$_SESSION['user_id'],
+        'username' => $_SESSION['username'] ?? 'Bạn',
+        'role'     => (int)($_SESSION['role'] ?? 2),
+    ];
+}
